@@ -7,17 +7,24 @@ void bankShowMenu();
 void bankBalanceInquiry();
 void bankDeposit();
 void bankWithdrawal();
+void bankOpenAccount();
 void bankCloseAccount();
 void bankInterest();
 void bankPrint();
 
-enum bankAction{
-    open,
-    close,
-    deposit,
-    withdrawal,
-    inquiry,
-    interest,
-};
+typedef enum boolean{
+    true = 1,
+    false = 0,
+} boolean;
 
+typedef enum bankAction{
+    open = 'O',
+    close = 'C',
+    deposit = 'D',
+    withdrawal = 'W',
+    inquiry = 'B',
+    printAll = 'P',
+    interest = 'I',
+    exit = 'E',
+} bankAction;
 #endif
