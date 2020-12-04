@@ -12,19 +12,19 @@ void bankCloseAccount();
 void bankInterest();
 void bankPrint();
 
-typedef enum boolean{
+typedef enum boolean {
     true = 1,
     false = 0,
 } boolean;
 
-typedef enum bankAction{
-    open = 'O',
-    close = 'C',
-    deposit = 'D',
-    withdrawal = 'W',
-    inquiry = 'B',
-    printAll = 'P',
-    interest = 'I',
-    exit = 'E',
+typedef enum bankAction {
+    bank_open = 'O',
+    bank_close = 'C',
+    bank_deposit = 'D',
+    bank_withdrawal = 'W',
+    bank_inquiry = 'B',
+    bank_printAll = 'P',
+    bank_interest = 'I',
+    bank_exit = 'E',
 } bankAction;
 #endif

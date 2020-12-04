@@ -1,48 +1,44 @@
-#include <stdio.h>
 #include "myBank.h"
+#include <stdio.h>
 
-int main(){
+int main() {
     int run = true;
     char command = 0;
-    while (run)
-    {
+    while (run) {
         bankShowMenu();
         // scanf would always work with chars.
-        scanf(" %c", command);
-        switch (command)
-        {
-        case exit:
+        scanf(" %c", &command);
+        switch (command) {
+        case bank_exit:
             run = false;
             break;
-        case open: 
+        case bank_open:
             bankOpenAccount();
             break;
-        case close:
+        case bank_close:
             bankCloseAccount();
             break;
-        case withdrawal:
+        case bank_withdrawal:
             bankWithdrawal();
             break;
-        case deposit:
+        case bank_deposit:
             bankDeposit();
             break;
-        case printAll:
+        case bank_printAll:
             bankPrint();
             break;
-        case interest:
+        case bank_interest:
             bankInterest();
             break;
-        case inquiry:
+        case bank_inquiry:
             bankBalanceInquiry();
             break;
         default:
             printf("Invalid transaction type\n");
             break;
         }
-        
+
         printf("\n");
     }
     return 0;
 }
-
-
